@@ -1,0 +1,59 @@
+.motto-section{
+  display:grid;
+  height:700px;
+  width:100%;
+  grid-template-columns: 1fr 1fr;
+  background-color: rgb(20,20,20);
+}
+
+.motto-text{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  width:max-content;
+  height:700px;
+  margin-left:2rem;
+}
+.motto-text span{
+  display:block;
+  font-weight:bold;
+  margin-bottom:10px;
+}
+.motto-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height:700px;
+}
+.scrol {
+  width: 600px;
+  opacity: 0;
+  scale: 0;
+  transform: translateY(-100%);
+  animation: scro 2s linear forwards;
+  scroll-timeline: scroll; 
+  animation-fill-mode: forwards; 
+  animation-range: 100px 400px; 
+}
+
+@keyframes scro {
+  to {
+    opacity: 1;
+    scale: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+@media (max-width:750px) {
+  .motto-section,
+  .motto-text,
+  .motto-img{
+    height:400px;
+  }
+  .motto-img{
+    width:300px;
+  }
+}
